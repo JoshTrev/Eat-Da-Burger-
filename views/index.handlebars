@@ -1,1 +1,24 @@
-<h1>Buger App!</h1>
+<h1>Burger App!</h1>
+
+<ul>
+{{#each burgers}}
+{{#unless devoured}}
+    {{!-- Render undevoured Burgers here --}}
+    <li>
+    {{ name }}
+    <button data-id={{id}} class="eatBurgerBtn">Devour</button>
+    </li>
+{{/unless}}
+{{/each}}
+</ul>
+
+<hr />
+
+<ul>
+{{#each burgers}}
+{{#if devoured}}
+    {{!-- Render devoured Burgers here --}}
+    <li>{{ name }}</li>
+{{/if}}
+{{/each}}
+</ul>
