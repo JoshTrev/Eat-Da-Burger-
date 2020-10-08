@@ -6,7 +6,7 @@
     {{!-- Render undevoured Burgers here --}}
     <li>
     {{ burger_name }}
-    <button data-id={{id}} class="eatBurgerBtn">Devour</button>
+    <button data-id={{id}} data-devoured={{devoured}} class="eatBurgerBtn">Devour</button>
     </li>
 {{/unless}}
 {{/each}}
@@ -22,3 +22,14 @@
 {{/if}}
 {{/each}}
 </ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burgerID">Buger Name:</label>
+    <input type="text" id="burgerID" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
